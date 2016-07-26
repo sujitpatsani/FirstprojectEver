@@ -1,8 +1,11 @@
 package test;
 
+import org.apache.log4j.Logger;
+
 public class Book {
 	
 	private String title;
+	static Logger logger;
 	
 	public String getTitle(){
 		
@@ -12,6 +15,8 @@ public class Book {
 
 	public static void main(String[] args) {
 		Book b= new Book();
+		logger=Logger.getLogger("deblopp");
+		logger.info("Start of logger");
 		System.out.println(b.getTitle());
 		
 		String sg=b.getTitle();
